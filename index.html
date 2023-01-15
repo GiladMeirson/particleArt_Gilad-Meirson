@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>D</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Assistant:wght@800&display=swap" rel="stylesheet">
+        <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        body{
+            background-color: black;
+            overflow: hidden;
+        }
+        #wrapBtn {
+            text-align: justify;
+            font-family: 'Assistant';
+            font-size: 2vw;
+            position: absolute;
+            background-color: rgb(0, 0, 0);
+            width: 85vw;
+            height: 85vh;
+            left: 7.5vw;
+            top: 7.5vh;
+            color: wheat;
+            border-radius: 20%;
+            border: 2px goldenrod solid;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+}
+#wrapBtn p {
+    margin-right: 28px;
+    margin-left: 182px;
+}
+td{
+    border-bottom: 1px rgb(231, 188, 107) solid;
+}
+
+
+    button{
+        background-image: radial-gradient(rgb(117, 230, 201),rgb(70, 165, 149), rgb(44, 95, 116));
+        cursor: pointer;
+        font-size: 8vw;
+        padding: 5vh 5vw;
+        border-radius: 25%;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+    button:hover{
+        background-image: radial-gradient(rgb(70, 165, 149), rgb(44, 95, 116),rgb(117, 230, 201));
+        box-shadow: rgba(70, 165, 149, 0.548) 0px -23px 25px 0px inset, rgba(108, 226, 207, 0.315) 0px -36px 30px 0px inset, rgba(114, 236, 216, 0.678) 0px -79px 40px 0px inset, rgba(141, 231, 216, 0.699) 0px 2px 1px, rgba(154, 247, 231, 0.671) 0px 4px 2px, rgba(154, 224, 213, 0.582) 0px 8px 4px, rgba(120, 226, 208, 0.466) 0px 16px 8px, rgba(144, 250, 232, 0.527) 0px 32px 16px;
+        color: beige;
+
+    }
+    </style>
+        <script src="index.js"></script>
+    </head>
+    <body onscroll="stam()" onload="init(this)">
+        <div id="wrapBtn">
+            <button id="Start" onclick="Start(this)">START</button>
+            <table>
+                <tr>
+                    <td>
+                        <p>Click:</p>
+                    </td>
+                    <td>
+                        <p>push away all the particles in your radius</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Right-click:</p>
+                    </td>
+                    <td>
+                        <p>will add some particles to your party :)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>'+' or '=': </p>
+
+                    </td>
+                    <td>
+                        <p>will add Connectors to you particles</p>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p> '-': </p>
+
+                    </td>
+                    <td>
+                        <p>for remove some of the Connectors</p>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>'d':</p>
+
+                    </td>
+                    <td>
+                        <p>for delete some of the particles</p>
+
+                    </td>
+                </tr>
+            </table>
+            <!-- <p>Click: push away all the particles in your radius <br>
+            Right-click: will add some particles to your party :) <br>
+            '+' or '=': will add Connectors to you particles <br>
+            '-': for remove some of the Connectors <br>
+            'd': for delete some of the particles
+            </p> -->
+        </div>
+        <canvas id="Can"></canvas>
+    </body>
+</html>
